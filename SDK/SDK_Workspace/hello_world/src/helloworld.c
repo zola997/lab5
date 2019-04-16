@@ -52,7 +52,8 @@ int main()
     int br1;
     int br2;
     int n=1;
-    unsigned char string_s[] = "PROVERA \n";
+    int smer = 0, smer1 = 0;
+    unsigned char string_s[] = "LAZA JE LEGENDA";
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -69,21 +70,47 @@ int main()
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     do {
     	//VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0xA12345);
-    brisi_tekst(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR,i);
+    //brisi_tekst(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR,i);
+    //clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+br);
-    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i, string_s,8);
-    for(br1=0;br1<1000000;br1++){
+
+    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i, string_s,15);
+    for(br1=0;br1<300000;br1++){
     }
     //VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0xB23456);
 
-    i++;
-    br++;
-    if(br==0x22) {
-    	br=-0x22;
 
+    if (smer == 0){
+    	br += 0x1;
+    	if(br==0x22) {
+        	//br=-0x22;
+    		smer = 1;
+        }
+    }else{
+    	br -= 0x1;
+    	if(br == -0x22){
+    		smer = 0;
+    	}
     }
 
-    if(i==0x127)  i=0xA0;
+    if (smer1 == 0){
+
+        print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i-4, " ",1);
+        i += 1;
+    	if(i == 0x107){
+    	        //print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i, "               ",15);
+    	    	//i=0xA0;
+    	        smer1 = 1;
+    	    }
+    }else{
+
+        print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR+i+0x38, " ",1);
+        i -= 1;
+    	if(i == 0xA0){
+    		smer1 = 0;
+    	}
+    }
+
     } while (TRUE);
 
     set_cursor(350);

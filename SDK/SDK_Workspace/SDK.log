@@ -242,3 +242,91 @@
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
 12:20:29.987 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+09:12:32.929 INFO  - Processing command line option -hwspec C:\Users\student\Desktop\veyba5\lab5\SDK\SDK_Export\hw\system.xml. 
+09:12:34.443 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from C:\Users\student\Desktop\veyba5\lab5\SDK\SDK_Export\hw\system.xml. 
+09:12:34.489 INFO  - Copied contents of C:\Users\student\Desktop\veyba5\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+09:12:34.492 INFO  - Copied contents of C:\Users\student\Desktop\veyba5\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:12:34.494 INFO  - Copied contents of C:\Users\student\Desktop\veyba5\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:12:34.918 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:12:36.119 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:12:37.084 INFO  - Updating hardware inferred compiler options for hello_world. 
+09:12:37.097 INFO  - Clearing existing target manager status. 
+09:12:39.431 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+09:16:06.375 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:17:13.183 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:18:33.215 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:18:52.911 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:19:22.898 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:20:23.522 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:26:13.825 INFO  - Processing command line option -hwspec D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:26:14.565 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:26:14.577 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+09:26:14.581 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:26:14.583 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:26:14.837 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:26:15.703 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:26:21.714 INFO  - Updating hardware inferred compiler options for hello_world. 
+09:26:21.733 INFO  - Clearing existing target manager status. 
+09:26:23.908 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+09:28:13.962 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:00:43.879 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:01:12.925 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:01:48.051 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:03:17.352 WARN  - Terminating existing sessions on processor microblaze_0 
+11:03:18.676 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:06:32.231 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:08:17.941 WARN  - Terminating existing sessions on processor microblaze_0 
+11:08:19.179 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:09:01.852 WARN  - Terminating existing sessions on processor microblaze_0 
+11:09:03.049 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:09:14.492 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:09:20.992 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+11:09:27.825 WARN  - Terminating existing sessions on processor microblaze_0 
+11:09:44.749 WARN  - Terminating existing sessions on processor microblaze_0 
+11:10:10.674 WARN  - Terminating existing sessions on processor microblaze_0 
+11:10:31.940 WARN  - Terminating existing sessions on processor microblaze_0 
+11:10:44.215 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:11:11.241 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:14:12.370 WARN  - Terminating existing sessions on processor microblaze_0 
+11:14:13.647 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:15:20.596 WARN  - Terminating existing sessions on processor microblaze_0 
+11:15:21.930 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:16:13.003 WARN  - Terminating existing sessions on processor microblaze_0 
+11:16:14.365 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:16:54.134 WARN  - Terminating existing sessions on processor microblaze_0 
+11:16:55.540 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:17:05.862 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:17:11.962 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+11:17:23.663 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:17:32.322 WARN  - Terminating existing sessions on processor microblaze_0 
+11:17:36.085 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:18:01.100 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:18:58.012 WARN  - Terminating existing sessions on processor microblaze_0 
+11:18:59.363 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:25:05.532 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+11:25:28.029 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:29:25.952 WARN  - Terminating existing sessions on processor microblaze_0 
+11:29:27.302 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:32:30.808 WARN  - Terminating existing sessions on processor microblaze_0 
+11:32:32.204 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:33:25.936 WARN  - Terminating existing sessions on processor microblaze_0 
+11:33:27.283 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+11:33:32.901 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:33:44.700 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:33:53.666 WARN  - Terminating existing sessions on processor microblaze_0 
+11:33:57.817 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
