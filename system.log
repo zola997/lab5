@@ -1450,3 +1450,33 @@ Done writing filter settings to:
 	D:\ra205-2016\lab5\etc\system.filters
 Done writing Tab View settings to:
 	D:\ra205-2016\lab5\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Writing filter settings....
+Done writing filter settings to:
+	D:\ra205-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\ra205-2016\lab5\etc\system.gui
+Writing filter settings....
+Done writing filter settings to:
+	D:\ra205-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\ra205-2016\lab5\etc\system.gui
+Assigned Driver my_timer 1.00.a for instance my_timer_0
+my_timer_0 has been added to the project
+WARNING:EDK:2137 - Peripheral my_timer_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00007fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232	axi4lite_0
+  (0x41400000-0x4140ffff) debug_module	axi4lite_0
+  (0x70a00000-0x70a0ffff) my_timer_0	axi4lite_0
+  (0x7de00000-0x7de0ffff) my_peripheral_0	axi4lite_0
+  (0xc0000000-0xc3ffffff) vga_periph_mem_0	axi4lite_0
+INFO:EDK - Use RS232 as reference
+INFO:EDK - Connect bus interface S_AXI to axi4lite_0
+INFO:EDK - Connect clock port S_AXI_ACLK to clk_100_0000MHz
+INFO:EDK - External IO port grouping doneINFO:EDK - Generate address successfully
+INFO:EDK - Successfully finished auto bus connection for IP instance: my_timer_0

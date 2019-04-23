@@ -28,6 +28,7 @@
  PORT vga_periph_0_red_o_pin = vga_periph_0_red_o, DIR = O, VEC = [7:0]
  PORT vga_periph_0_green_o_pin = vga_periph_0_green_o, DIR = O, VEC = [7:0]
  PORT vga_periph_0_blue_o_pin = vga_periph_0_blue_o, DIR = O, VEC = [7:0]
+ PORT my_timer_0_S_AXI_ACLK_pin = net_my_timer_0_S_AXI_ACLK_pin, DIR = I, SIGIS = CLK
 
 
 # PORT vga_periph_0_display_mode_i_pin = vga_periph_0_display_mode_i, DIR = I, VEC = [1:0]
@@ -169,8 +170,8 @@ END
 BEGIN vga_periph_mem
  PARAMETER INSTANCE = vga_periph_mem_0
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_S_AXI_MEM0_BASEADDR = 0xC0000000
- PARAMETER C_S_AXI_MEM0_HIGHADDR = 0xC3FFFFFF
+ PARAMETER C_S_AXI_MEM0_BASEADDR = 0xc0000000
+ PARAMETER C_S_AXI_MEM0_HIGHADDR = 0xc3ffffff
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = clk_100_0000MHz
  PORT clk_i = vga_periph_0_clk_i
@@ -186,5 +187,15 @@ BEGIN vga_periph_mem
  PORT blue_o = vga_periph_0_blue_o
  PORT direct_mode_i = my_peripheral_0_DIP_Data[0]
  PORT display_mode_i = my_peripheral_0_DIP_Data[2:1]
+END
+
+BEGIN my_timer
+ PARAMETER INSTANCE = my_timer_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_NUM_REG = 4
+ PARAMETER C_BASEADDR = 0x70a00000
+ PARAMETER C_HIGHADDR = 0x70a0ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = net_my_timer_0_S_AXI_ACLK_pin
 END
 
