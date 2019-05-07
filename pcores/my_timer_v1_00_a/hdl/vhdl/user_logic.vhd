@@ -26,7 +26,7 @@
 -- Filename:          user_logic.vhd
 -- Version:           1.00.a
 -- Description:       User logic.
--- Date:              Tue Apr 23 11:27:29 2019 (by Create and Import Peripheral Wizard)
+-- Date:              Thu Mar 06 23:14:07 2014 (by Create and Import Peripheral Wizard)
 -- VHDL Standard:     VHDL'93
 ------------------------------------------------------------------------------
 -- Naming Conventions:
@@ -98,8 +98,7 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     --USER ports added here
-	my_timer_irq                   : out std_logic;
-
+    my_timer_irq                   : out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -132,11 +131,12 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
-
-  -- Timer signals and components
   signal timer_count : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
   signal timer_count_tc : std_logic;
   signal timer_count_en : std_logic;
+
+
+
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
   ------------------------------------------
@@ -153,27 +153,27 @@ architecture IMP of user_logic is
 begin
 
   --USER logic implementation added here
-  
-  -- timer counter
- process (Bus2IP_Clk, Bus2IP_Resetn) 
- begin
-	if Bus2IP_Resetn = '0' then
-		timer_count <= (others => '0');
-	elsif rising_edge(Bus2IP_Clk) then
-		if (timer_count_en = '1') then
-			if (timer_count_tc = '1') then
-				timer_count <= (others => '0');
-			else
-				timer_count <= timer_count + 1;
-			end if;
-		end if;
-	end if;
- end process;
- timer_count_en <= slv_reg1(1);
- timer_count_tc <= '1' when (timer_count >= (slv_reg0 - 1)) else '0';
 
- process( Bus2IP_Clk ) is 
- begin
+  -- timer counter
+  process (Bus2IP_Clk, Bus2IP_Resetn)
+  begin
+    if Bus2IP_Resetn = '0' then
+      timer_count <= (others => '0');
+    elsif rising_edge(Bus2IP_Clk) then 
+      if (timer_count_en = '1') then
+        if (timer_count_tc = '1')  then
+          timer_count <= (others => '0');
+        else
+          timer_count <= timer_count + 1;
+        end if;                 
+      end if;                 
+    end if;                 
+  end process;                 
+  timer_count_en <= slv_reg1(1);  
+  timer_count_tc <= '1' when (timer_count >= (slv_reg0 - 1))  else '0';
+  
+process( Bus2IP_Clk ) is
+begin
 	if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
 		if Bus2IP_Resetn = '0' then
 			my_timer_irq <= '0';
@@ -181,7 +181,9 @@ begin
 			my_timer_irq <= timer_count_tc;
 		end if;
 	end if;
- end process;
+end process;
+
+  
 
 
   ------------------------------------------
@@ -207,13 +209,8 @@ begin
   slv_write_ack     <= Bus2IP_WrCE(0) or Bus2IP_WrCE(1) or Bus2IP_WrCE(2) or Bus2IP_WrCE(3);
   slv_read_ack      <= Bus2IP_RdCE(0) or Bus2IP_RdCE(1) or Bus2IP_RdCE(2) or Bus2IP_RdCE(3);
 
-  
   -- implement slave model software accessible register(s)
-  --SLAVE_REG_WRITE_PROC : process( Bus2IP_Clk ) is
-  
-  -- implement slave model software accessible register(s) read mux
- SLAVE_REG_READ_PROC : process( slv_reg_read_sel, slv_reg0, slv_reg1, slv_reg2, slv_reg3,
- timer_count, timer_count_tc, timer_count_en) is
+  SLAVE_REG_WRITE_PROC : process( Bus2IP_Clk ) is
   begin
 
     if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
@@ -256,19 +253,19 @@ begin
   end process SLAVE_REG_WRITE_PROC;
 
   -- implement slave model software accessible register(s) read mux
-  SLAVE_REG_READ_PROC : process( slv_reg_read_sel, slv_reg0, slv_reg1, slv_reg2, slv_reg3 ) is
+-- implement slave model software accessible register(s) read mux
+ SLAVE_REG_READ_PROC : process( slv_reg_read_sel, slv_reg0, slv_reg1, slv_reg2, slv_reg3,
+timer_count, timer_count_tc, timer_count_en) is
   begin
-
     case slv_reg_read_sel is
       when "1000" => slv_ip2bus_data <= slv_reg0;
-      when "0100" => slv_ip2bus_data <= slv_reg1;
-      when "0010" => slv_ip2bus_data <= slv_reg2;
+      when "0100" => slv_ip2bus_data <= slv_reg1(31 downto 2) & timer_count_en & timer_count_tc;
+      when "0010" => slv_ip2bus_data <= timer_count;
       when "0001" => slv_ip2bus_data <= slv_reg3;
       when others => slv_ip2bus_data <= (others => '0');
     end case;
-
-  end process SLAVE_REG_READ_PROC;
-
+  end process SLAVE_REG_READ_PROC;     
+  
   ------------------------------------------
   -- Example code to drive IP to Bus signals
   ------------------------------------------

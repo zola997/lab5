@@ -40,9 +40,17 @@
 #include "xparameters.h"
 #include "xio.h"
 #include "vga_periph_mem.h"
+#include "xil_exception.h"
+#include "xintc.h"
 
 
 void print(char *str);
+XIntc Intc;
+void my_timer_interrupt_handler(void * baseaddr_p) {
+xil_printf("\n\rtimer timeout.");
+}
+
+
 
 int main()
 {
@@ -119,3 +127,6 @@ int main()
 
     return 0;
 }
+
+
+

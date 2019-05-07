@@ -353,3 +353,40 @@
 11:50:58.911 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:51:14.747 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:56:25.600 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:05:54.801 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+12:13:05.310 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:56:43.319 INFO  - Project basic_system_hw_platform's source hardware specification located at D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:57:05.998 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+10:57:06.005 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+10:57:06.007 INFO  - Copied contents of D:\ra205-2016\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+10:57:06.255 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:57:07.239 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+10:57:08.307 INFO  - Updating hardware inferred compiler options for hello_world. 
+10:57:08.326 INFO  - Clearing existing target manager status. 
+10:57:10.659 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+10:58:49.118 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:50:00.361 INFO  - Processing command line option -hwspec D:\ra205-2016\lab5_old\SDK\SDK_Export\hw\system.xml. 
+11:50:01.225 INFO  - The hardware specification for project 'basic_system_hw_platform' is different from D:\ra205-2016\lab5_old\SDK\SDK_Export\hw\system.xml. 
+11:50:01.238 INFO  - Copied contents of D:\ra205-2016\lab5_old\SDK\SDK_Export\hw\system.xml into \basic_system_hw_platform\system.xml. 
+11:50:01.241 INFO  - Copied contents of D:\ra205-2016\lab5_old\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+11:50:01.242 INFO  - Copied contents of D:\ra205-2016\lab5_old\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+11:50:01.515 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:50:02.487 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+11:50:02.621 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: axi_intc_0, driver: intc_v2_06_a.
+			Peripheral Instance: my_timer_0, driver: generic_v1_00_a.
+ 
+11:50:03.468 INFO  - Updating hardware inferred compiler options for hello_world. 
+11:50:03.502 INFO  - Clearing existing target manager status. 
+11:50:05.827 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:56:58.498 INFO  - FPGA configured successfully with bitstream "D:/ra205-2016/lab5_old/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+12:01:26.023 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
